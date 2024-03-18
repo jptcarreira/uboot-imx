@@ -785,15 +785,6 @@ static int disable_m7_node(void *blob)
 	return delete_fdt_nodes(blob, nodes_path_m7, ARRAY_SIZE(nodes_path_m7));
 }
 
-#ifdef CONFIG_OF_BOARD_FIXUP
-#ifndef CONFIG_SPL_BUILD
-int board_fix_fdt(void *fdt)
-{
-	return 0;
-}
-#endif
-#endif
-
 static int is_m7_off(void)
 {
 	struct scmi_power_get_state power_in = {
