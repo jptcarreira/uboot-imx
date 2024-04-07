@@ -72,6 +72,16 @@
 	u-boot,dm-spl;
 };
 
+&sram0 {
+	u-boot,dm-pre-reloc;
+	u-boot,dm-spl;
+};
+
+&scmi_buf0 {
+	u-boot,dm-pre-reloc;
+	u-boot,dm-spl;
+};
+
 &scmi_buf1 {
 	u-boot,dm-pre-reloc;
 	u-boot,dm-spl;
