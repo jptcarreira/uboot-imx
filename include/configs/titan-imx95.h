@@ -202,8 +202,10 @@
 /* Number of Rx BD rings: 8 per ENETC instance */
 #endif
 
-#ifdef CONFIG_ANDROID_SUPPORT
+#if defined(CONFIG_ANDROID_SUPPORT)
 #include "imx95_titan_android.h"
+#elif defined (CONFIG_ANDROID_AUTO_SUPPORT)
+#include "imx95_titan_android_auto.h"
 #endif
 
 #endif
